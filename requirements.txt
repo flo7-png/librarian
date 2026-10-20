@@ -1,0 +1,10 @@
+pypdf
+pdfplumber
+pymupdf
+pytesseract
+python-docx
+python-pptx
+openpyxl
+pandas
+docling
+marker-pdf

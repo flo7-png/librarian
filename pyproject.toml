@@ -1,0 +1,20 @@
+[project]
+name = "librarian"
+version = "0.1.0"
+description = "Local-only document extraction and curation pipeline for mixed archives"
+requires-python = ">=3.11"
+dependencies = [
+  "pypdf",
+  "pdfplumber",
+  "pymupdf",
+  "pytesseract",
+  "python-docx",
+  "python-pptx",
+  "openpyxl",
+  "pandas",
+  "docling",
+  "marker-pdf",
+]
+
+[tool.setuptools]
+packages = ["src"]

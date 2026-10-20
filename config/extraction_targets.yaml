@@ -1,0 +1,36 @@
+targets:
+  - type: "scanned_pdf"
+    tool: "tesseract"
+    fallbacks: ["pypdf", "pdfplumber", "pymupdf"]
+    notes: "Use OCR when the PDF has no text layer."
+
+  - type: "native_pdf"
+    tool: "pypdf"
+    fallbacks: ["pdfplumber", "pymupdf"]
+    notes: "Use if text is embedded."
+
+  - type: "complex_pdf"
+    tool: "docling"
+    fallbacks: ["marker", "pdfplumber"]
+    notes: "Use for mixed layouts, tables, equations, difficult pages."
+
+  - type: "docx"
+    tool: "python_docx"
+    notes: "Extract paragraphs and metadata."
+
+  - type: "pptx"
+    tool: "python_pptx"
+    notes: "Extract slide text and optional notes."
+
+  - type: "xlsx"
+    tool: "openpyxl"
+    fallbacks: ["pandas"]
+    notes: "Treat as structured data, not narrative text."
+
+  - type: "json_export"
+    tool: "python_custom_parser"
+    notes: "Normalize nested provider exports into a common schema."
+
+  - type: "llm_digest"
+    tool: "ollama"
+    notes: "Only for selected high-value documents after extraction."
