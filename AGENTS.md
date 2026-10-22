@@ -377,6 +377,20 @@ python .\scripts\triage_document_health.py
 python .\scripts\repair_bad_files.py --dry-run
 ```
 
+**DB-backed collections**: when sources are registered in `data/librarian.db`
+(the `app/` service) instead of copied into `data/input`, generate the
+manifest from the ledger instead of scanning (same schema as
+`build_manifest.py`; adds `chars` so triage can apply the
+`text_zero_chars` rule):
+
+```powershell
+python .\scripts\build_manifest_from_db.py
+```
+
+Then run `classify_documents.py` and the triage steps as usual. Triage
+re-hashes every file from disk (~10-12 min for 4 GB under Windows Defender
+real-time scanning) — run it detached and wait for `data/reviews/needs_review.json`.
+
 ## Data model expectations
 
 This repository expects a source-data directory at `data/input`, a manifest directory at `data/manifests`, extracted output under `data/extracted`, and review output under `data/reviews`.

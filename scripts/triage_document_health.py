@@ -46,7 +46,9 @@ def validate_office_zip(path: Path) -> tuple[bool, str | None]:
         return False, "missing file"
     try:
         with zipfile.ZipFile(path) as zf:
-            zf.testzip()
+            bad_member = zf.testzip()
+        if bad_member is not None:
+            return False, f"bad CRC-32 for {bad_member}"
         return True, None
     except zipfile.BadZipFile as exc:
         return False, f"bad zip: {exc}"
@@ -135,7 +137,7 @@ def main() -> None:
             continue
 
         suffix = full_path.suffix.lower()
-        if suffix in {".docx", ".pptx", ".xlsx", ".xls"}:
+        if suffix in {".docx", ".pptx", ".xlsx"}:
             ok, detail = validate_office_zip(full_path)
             if not ok:
                 record["status"] = "office_corruption"
@@ -156,6 +158,14 @@ def main() -> None:
                 record["details"]["pdf_check"] = detail
                 review_items.append(record)
                 continue
+
+        if item.get("chars") == 0:
+            record["status"] = "text_zero_chars"
+            record["reason"] = "extraction produced zero characters"
+            record["severity"] = "medium"
+            record["repairable"] = False
+            review_items.append(record)
+            continue
 
         if item.get("classification") == "other":
             record["status"] = "needs_review"
