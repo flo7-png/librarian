@@ -1,0 +1,64 @@
+# Review and repair rules
+
+This file defines the local triage and repair path for damaged or low-quality source documents.
+
+rules:
+  auto_exclude:
+    lock_file_prefixes:
+      - "~$"
+    zero_byte_files: true
+    duplicate_hashes: true
+
+  triage:
+    categories:
+      - lock_file
+      - empty_file
+      - duplicate
+      - office_corruption
+      - pdf_damage
+      - text_zero_chars
+      - missing_file
+      - valid
+
+  repair:
+    pdf:
+      tools:
+        - name: "qpdf"
+          repo: "https://github.com/qpdf/qpdf"
+          purpose: "repair, validate, and normalize PDF structure"
+          install: "winget install qpdf.qpdf"
+        - name: "ghostscript"
+          repo: "https://github.com/ArtifexSoftware/ghostpdl"
+          purpose: "rewrite or rasterize damaged PDFs"
+          install: "Download Ghostscript installer from the project site"
+        - name: "tesseract"
+          repo: "https://github.com/tesseract-ocr/tesseract"
+          purpose: "OCR fallback when PDFs are image-only or corrupted"
+          install: "Install to PATH"
+
+    office:
+      tools:
+        - name: "libreoffice"
+          repo: "https://www.libreoffice.org/"
+          purpose: "rescue broken DOCX/PPTX/XLSX files via headless conversion"
+          install: "Official LibreOffice installer"
+        - name: "7zip"
+          repo: "https://www.7-zip.org/"
+          purpose: "inspect and validate ZIP-based Office files"
+          install: "Official installer"
+
+    dedupe:
+      tools:
+        - name: "jdupes"
+          repo: "https://github.com/jbruchon/jdupes"
+          purpose: "duplicate detection across large mixed collections"
+          install: "winget install jdupes"
+
+  review:
+    destination: "data/reviews"
+    report_name: "needs_review.json"
+    log_name: "repair_log.json"
+
+  quality:
+    minimum_chars: 25
+    minimum_quality_score: 0.35

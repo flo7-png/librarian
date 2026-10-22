@@ -1,0 +1,71 @@
+# Tool manifest
+
+This file is the canonical list of approved local tools for this project.
+
+```yaml
+tools:
+  python:
+    repo: "https://github.com/python/cpython"
+    purpose: "runtime for the project"
+    install: "Official Windows installer"
+
+  git:
+    repo: "https://github.com/git/git"
+    purpose: "version control"
+    install: "Official Git for Windows installer"
+
+  tesseract:
+    repo: "https://github.com/tesseract-ocr/tesseract"
+    purpose: "OCR for scanned PDFs"
+    install: "Install to PATH"
+
+  pypdf:
+    repo: "https://github.com/py-pdf/pypdf"
+    purpose: "standard PDF text extraction"
+    install: "pip install pypdf"
+
+  pdfplumber:
+    repo: "https://github.com/jsvine/pdfplumber"
+    purpose: "layout-aware PDF extraction"
+    install: "pip install pdfplumber"
+
+  pymupdf:
+    repo: "https://github.com/pymupdf/PyMuPDF"
+    purpose: "page-level PDF handling and fallback extraction"
+    install: "pip install pymupdf"
+
+  docling:
+    repo: "https://github.com/DS4SD/docling"
+    purpose: "hard-layout PDF parsing"
+    install: "pip install docling"
+
+  marker:
+    repo: "https://github.com/VikParuchuri/marker"
+    purpose: "alternative layout-aware extraction"
+    install: "pip install marker-pdf"
+
+  python_docx:
+    repo: "https://github.com/python-openxml/python-docx"
+    purpose: "DOCX extraction"
+    install: "pip install python-docx"
+
+  python_pptx:
+    repo: "https://github.com/scanny/python-pptx"
+    purpose: "PPTX extraction"
+    install: "pip install python-pptx"
+
+  openpyxl:
+    repo: "https://github.com/openpyxl/openpyxl"
+    purpose: "XLSX/XLS processing"
+    install: "pip install openpyxl"
+
+  pandas:
+    repo: "https://github.com/pandas-dev/pandas"
+    purpose: "structured data processing"
+    install: "pip install pandas"
+
+  ollama:
+    repo: "https://github.com/ollama/ollama"
+    purpose: "local LLM runtime"
+    install: "Follow official Windows install steps"
+```

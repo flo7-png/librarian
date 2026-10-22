@@ -2,6 +2,30 @@
 
 This document defines the coding conventions, architecture patterns, and operational rules for agents working on the Librarian codebase.
 
+## Repository Sync (mandatory before any work)
+
+Before doing any work in this repo, always sync to the latest `main`
+branch and confirm the working tree is clean:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\sync-main.ps1
+```
+
+Manual equivalent (what the script runs):
+
+```powershell
+git fetch origin main
+git checkout main
+git pull --ff-only origin main
+git status   # must print nothing
+```
+
+Exit codes: `0` synced + clean (safe to start) · `1` dirty tree or no commits
+yet (resolve first — never work on top of uncommitted changes) · `2` no
+`origin` remote (`git remote add origin <url>`) · `3/4/5` fetch/checkout/pull
+failed · `6` dirty after sync. Do not start any task while the script exits
+non-zero.
+
 ## Core Principles
 
 1. **Local-First, No Cloud** — Zero external network calls. Only localhost Ollama (port 11434) is permitted.
@@ -186,34 +210,10 @@ python -m app.cli quality <doc-id>
 python -m app.cli summarize <doc-id> --high-value
 ```
 
-## Repository Sync (mandatory before any work)
-
-Before doing any work in this repo, always sync to the latest `main`
-branch and confirm the working tree is clean:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts\sync-main.ps1
-```
-
-Manual equivalent (what the script runs):
-
-```powershell
-git fetch origin main
-git checkout main
-git pull --ff-only origin main
-git status   # must print nothing
-```
-
-Exit codes: `0` synced + clean (safe to start) · `1` dirty tree or no commits
-yet (resolve first — never work on top of uncommitted changes) · `2` no
-`origin` remote (`git remote add origin <url>`) · `3/4/5` fetch/checkout/pull
-failed · `6` dirty after sync. Do not start any task while the script exits
-non-zero.
-
 ## Git Hygiene
 
 - **Commit messages**: `feat:`, `fix:`, `test:`, `docs:`, `refactor:`
-- **Never commit** `data/`, `logs/`, `.env`, `__pycache__/`, `.pytest_cache/`
+- **Never commit** `data/`, `logs/`, `.env`, `Librarian.env`, `__pycache__/`, `.pytest_cache/`
 - **Run tests before push**: `pytest tests/ -q`
 - **No force push** to main
 
@@ -224,3 +224,183 @@ non-zero.
 - **Document status**: `GET /api/documents?collection_id=...&status=failed`
 - **Extraction files**: Check `data/extracted/<hash>.txt` and `manifests/<hash>.json`
 - **Worker stuck**: Check `Job.status = RUNNING` with old `started_at` → manual retry
+
+---
+
+## Extraction Pipeline (`src/` + `scripts/`) — origin conventions
+
+Local-only document extraction pipeline for research, curation, and archival workflows.
+
+This repository exists to solve the exact class of problems described: large mixed document collections, scanned PDFs, Office files, JSON exports, duplication, and local-only extraction without cloud APIs, SaaS OCR, or subscription fees.
+
+It is intentionally opinionated, strict, and boring: the goal is reliable local extraction, clean metadata, deduplication, and reviewable output that can be handed to a local model or a human curator without wasting compute on junk.
+
+## What this repo does
+
+- inventories a source tree and hashes every file
+- identifies likely duplicates before expensive work
+- classifies files by type
+- extracts text from PDFs, DOCX, PPTX, XLSX, and JSON exports
+- runs OCR for scanned PDFs using local Tesseract
+- normalizes output into a consistent schema
+- surfaces likely junk items for curation decisions
+- triages extraction health and repairs recoverable files locally
+- gives OpenCode a repo-local workflow to follow without cloud services
+
+## Strict rules
+
+- no cloud OCR or paid document intelligence
+- no SaaS AI extraction layer
+- no locked-in proprietary formats
+- Windows-first local installation
+- work with open-source tools only
+
+## Approved toolchain
+
+- Python: https://github.com/python/cpython
+- Git: https://github.com/git/git
+- Tesseract OCR: https://github.com/tesseract-ocr/tesseract
+- pypdf: https://github.com/py-pdf/pypdf
+- pdfplumber: https://github.com/jsvine/pdfplumber
+- PyMuPDF: https://github.com/pymupdf/PyMuPDF
+- Docling: https://github.com/DS4SD/docling
+- Marker: https://github.com/VikParuchuri/marker
+- python-docx: https://github.com/python-openxml/python-docx
+- python-pptx: https://github.com/scanny/python-pptx
+- openpyxl: https://github.com/openpyxl/openpyxl
+- pandas: https://github.com/pandas-dev/pandas
+- Ollama: https://github.com/ollama/ollama
+
+## Repo layout
+
+```text
+librarian/
+├── AGENTS.md
+├── README.md
+├── requirements.txt
+├── pyproject.toml
+├── .opencode/
+│   └── instructions.md
+├── config/
+│   ├── tool_manifest.yaml
+│   ├── extraction_targets.yaml
+│   └── review_rules.yaml
+├── docs/
+│   ├── TOOLCHAIN.md
+│   ├── WINDOWS_INSTALL.md
+│   ├── REPAIR_WORKFLOW.md
+│   └── PROJECT_DECISIONS.md
+├── scripts/
+│   ├── install_windows.ps1
+│   ├── install_python_packages.ps1
+│   ├── build_manifest.py
+│   ├── classify_documents.py
+│   ├── extract_pdf_text.py
+│   ├── extract_scanned_pdf.py
+│   ├── extract_office.py
+│   ├── normalize_json_exports.py
+│   ├── quality_gate.py
+│   ├── scan_inventory.py
+│   ├── triage_document_health.py
+│   └── repair_bad_files.py
+├── src/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── inventory.py
+│   ├── dedupe.py
+│   ├── classify.py
+│   ├── normalize.py
+│   ├── chunking.py
+│   ├── review.py
+│   ├── llm_local.py
+│   └── extractors/
+│       ├── __init__.py
+│       ├── pdf_text.py
+│       ├── pdf_ocr.py
+│       ├── office.py
+│       ├── json_exports.py
+│       └── archives.py
+├── app/                 # FastAPI service + worker layer (see Module Organization above)
+├── tests/               # pytest suite
+├── reports/             # human-facing triage/repair reports
+├── data/
+│   ├── input/
+│   ├── manifests/
+│   ├── extracted/
+│   ├── chunks/
+│   └── reviews/
+├── logs/
+│   └── .gitkeep
+└── .gitignore
+```
+
+## Pipeline Quickstart
+
+1. Install Python from the official repo:
+   https://github.com/python/cpython
+
+2. Install Git for Windows:
+   https://github.com/git/git
+
+3. Install Tesseract OCR:
+   https://github.com/tesseract-ocr/tesseract
+
+4. Open PowerShell in the repo root and create a venv:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+5. Install Python dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
+
+6. Run the pipeline:
+
+```powershell
+python .\scripts\build_manifest.py
+python .\scripts\classify_documents.py
+python .\scripts\extract_pdf_text.py
+python .\scripts\extract_scanned_pdf.py
+python .\scripts\extract_office.py
+python .\scripts\normalize_json_exports.py
+python .\scripts\quality_gate.py
+```
+
+7. Triage and repair unhealthy files (see `docs/REPAIR_WORKFLOW.md`):
+
+```powershell
+python .\scripts\triage_document_health.py
+python .\scripts\repair_bad_files.py --dry-run
+```
+
+## Data model expectations
+
+This repository expects a source-data directory at `data/input`, a manifest directory at `data/manifests`, extracted output under `data/extracted`, and review output under `data/reviews`.
+
+The system is designed to be extended in a clean way:
+
+- inventory + dedupe logic live under `src/inventory.py` and `src/dedupe.py`
+- extraction logic lives under `src/extractors/`
+- normalized outputs are separate from raw extraction output
+- review logic and quality gates live independently
+
+## Why this repo exists
+
+This repository is explicitly not a generic template. It is a practical answer to the exact problem set previously described:
+
+- scanned PDFs with no text layer
+- OCR quality issues
+- duplicated manuals and revisions
+- mixed Office-document dumps
+- noisy JSON exports
+- the need to avoid a full AI binge on junk files
+
+## Notes for OpenCode
+
+OpenCode should treat this repository as the authoritative local project. It should use the scripts and configuration in this repo, not introduce cloud services or paid extraction APIs.
+
+The repo is designed to be safe, local, and reviewable.
