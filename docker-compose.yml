@@ -1,0 +1,288 @@
+version: '3.8'
+
+networks:
+  archive_net:
+    driver: bridge
+
+volumes:
+  archive_app_data:
+    driver: local
+  archive_qdrant_data:
+    driver: local
+  archive_ollama_models:
+    driver: local
+
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.9.2
+    container_name: archive_qdrant
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6333:6333"
+    volumes:
+      - archive_qdrant_data:/qdrant/storage
+    networks:
+      - archive_net
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: archive_ollama
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:11434:11434"
+    volumes:
+      - archive_ollama_models:/root/.ollama
+    networks:
+      - archive_net
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: archive_api
+    restart: unless-stopped
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      - QDRANT_HOST=qdrant
+      - OLLAMA_HOST=http://ollama:11434
+      - DATA_DIR=/app-data
+    volumes:
+      - archive_app_data:/app-data
+      # Read-only source mounts mapped from .env
+      - type: bind
+        source: ${PATH_REFERENCES}
+        target: /sources/references
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_LSS}
+        target: /sources/army_lss
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_1TSC}
+        target: /sources/army_1tsc
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_ADMIN}
+        target: /sources/army_admin
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_GENERAL}
+        target: /sources/army_general
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_ENGINEER_SMARTBOOK}
+        target: /sources/army_engineer_smartbook
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_FORT_HOOD}
+        target: /sources/army_fort_hood
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_USACE_23SEP24}
+        target: /sources/army_usace_23sep24
+        read_only: true
+      - type: bind
+        source: ${PATH_TRC_COMPANIES}
+        target: /sources/trc_companies
+        read_only: true
+      - type: bind
+        source: ${PATH_USACE_TAFB}
+        target: /sources/usace_tafb
+        read_only: true
+      - type: bind
+        source: ${PATH_OLD_HD1_COTR}
+        target: /sources/old_hd1_cotr
+        read_only: true
+      - type: bind
+        source: ${PATH_GOOGLE_DRIVE}
+        target: /sources/google_drive
+        read_only: true
+      - type: bind
+        source: ${PATH_FERNLEY_NV}
+        target: /sources/fernley_nv
+        read_only: true
+      - type: bind
+        source: ${PATH_BOOKS}
+        target: /sources/books
+        read_only: true
+      - type: bind
+        source: ${PATH_ONEDRIVE}
+        target: /sources/onedrive
+        read_only: true
+      - type: bind
+        source: ${PATH_ONEDRIVE_ECU}
+        target: /sources/onedrive_ecu
+        read_only: true
+    depends_on:
+      - qdrant
+      - ollama
+    networks:
+      - archive_net
+
+  worker-fast:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: archive_worker_fast
+    restart: unless-stopped
+    command: ["python", "-m", "app.worker", "--queue", "fast"]
+    environment:
+      - QDRANT_HOST=qdrant
+      - OLLAMA_HOST=http://ollama:11434
+      - DATA_DIR=/app-data
+      - WORKER_CONCURRENCY=2
+    volumes:
+      - archive_app_data:/app-data
+      - type: bind
+        source: ${PATH_REFERENCES}
+        target: /sources/references
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_LSS}
+        target: /sources/army_lss
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_1TSC}
+        target: /sources/army_1tsc
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_ADMIN}
+        target: /sources/army_admin
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_GENERAL}
+        target: /sources/army_general
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_ENGINEER_SMARTBOOK}
+        target: /sources/army_engineer_smartbook
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_FORT_HOOD}
+        target: /sources/army_fort_hood
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_USACE_23SEP24}
+        target: /sources/army_usace_23sep24
+        read_only: true
+      - type: bind
+        source: ${PATH_TRC_COMPANIES}
+        target: /sources/trc_companies
+        read_only: true
+      - type: bind
+        source: ${PATH_USACE_TAFB}
+        target: /sources/usace_tafb
+        read_only: true
+      - type: bind
+        source: ${PATH_OLD_HD1_COTR}
+        target: /sources/old_hd1_cotr
+        read_only: true
+      - type: bind
+        source: ${PATH_GOOGLE_DRIVE}
+        target: /sources/google_drive
+        read_only: true
+      - type: bind
+        source: ${PATH_FERNLEY_NV}
+        target: /sources/fernley_nv
+        read_only: true
+      - type: bind
+        source: ${PATH_BOOKS}
+        target: /sources/books
+        read_only: true
+      - type: bind
+        source: ${PATH_ONEDRIVE}
+        target: /sources/onedrive
+        read_only: true
+      - type: bind
+        source: ${PATH_ONEDRIVE_ECU}
+        target: /sources/onedrive_ecu
+        read_only: true
+    depends_on:
+      - api
+    networks:
+      - archive_net
+
+  worker-slow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: archive_worker_slow
+    restart: unless-stopped
+    command: ["python", "-m", "app.worker", "--queue", "slow"]
+    environment:
+      - QDRANT_HOST=qdrant
+      - OLLAMA_HOST=http://ollama:11434
+      - DATA_DIR=/app-data
+      - WORKER_CONCURRENCY=1
+    volumes:
+      - archive_app_data:/app-data
+      - type: bind
+        source: ${PATH_REFERENCES}
+        target: /sources/references
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_LSS}
+        target: /sources/army_lss
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_1TSC}
+        target: /sources/army_1tsc
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_ADMIN}
+        target: /sources/army_admin
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_GENERAL}
+        target: /sources/army_general
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_ENGINEER_SMARTBOOK}
+        target: /sources/army_engineer_smartbook
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_FORT_HOOD}
+        target: /sources/army_fort_hood
+        read_only: true
+      - type: bind
+        source: ${PATH_ARMY_USACE_23SEP24}
+        target: /sources/army_usace_23sep24
+        read_only: true
+      - type: bind
+        source: ${PATH_TRC_COMPANIES}
+        target: /sources/trc_companies
+        read_only: true
+      - type: bind
+        source: ${PATH_USACE_TAFB}
+        target: /sources/usace_tafb
+        read_only: true
+      - type: bind
+        source: ${PATH_OLD_HD1_COTR}
+        target: /sources/old_hd1_cotr
+        read_only: true
+      - type: bind
+        source: ${PATH_GOOGLE_DRIVE}
+        target: /sources/google_drive
+        read_only: true
+      - type: bind
+        source: ${PATH_FERNLEY_NV}
+        target: /sources/fernley_nv
+        read_only: true
+      - type: bind
+        source: ${PATH_BOOKS}
+        target: /sources/books
+        read_only: true
+      - type: bind
+        source: ${PATH_ONEDRIVE}
+        target: /sources/onedrive
+        read_only: true
+      - type: bind
+        source: ${PATH_ONEDRIVE_ECU}
+        target: /sources/onedrive_ecu
+        read_only: true
+    depends_on:
+      - api
+    networks:
+      - archive_net

@@ -1,0 +1,11 @@
+# Per AGENTS.md "Git Hygiene": never commit data/, logs/, .env, __pycache__/, .pytest_cache/
+data/
+logs/
+.env
+Librarian.env
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Docker bind-mount mirror of D:\References (source material, not repo content)
+sources/
