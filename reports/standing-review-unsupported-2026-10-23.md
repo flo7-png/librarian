@@ -1,0 +1,772 @@
+# Standing review list — unsupported-type files (triage policy)
+
+Generated 2026-10-23 from `data/reviews/needs_review.json` (triage run 2026-10-22).
+Decision (Tim, 2026-10-23): **keep as a standing review list; do not change DB status now.**
+
+These files are *not* broken — the triage classifier flags them as outside its
+supported-type policy, while the app extractor already handles several of them
+(HTML/TXT extract successfully). Review later means: decide per-extension whether
+to extend `classify_documents.py` policy, accept as-is, or convert.
+
+**Total: 746 files**
+
+| extension | count |
+|---|---:|
+| `.html` | 347 |
+| `.doc` | 264 |
+| `.ppt` | 55 |
+| `.jpg` | 31 |
+| `.xml` | 21 |
+| `.txt` | 19 |
+| `.png` | 5 |
+| `.csv` | 3 |
+| `.htm` | 1 |
+
+## Full file list
+
+- `D:\References\Chrome Passwords.csv`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Assignment 1ITEC 6005 SP 2016 Solution (1).doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\ITEC 6005\Lean and Quality.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\ITEC 6005\Lect 14 Lean  Supply Chain Management-updated.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\ITEC 6005\Policy Deployment and lean-Hoshin Kanri.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 1\ITEC 6005 Lecture 1_Introduction (1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 1\Lecture 2_Service Process steps-Value Stream-updated.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 1\Lecture 3 Performance Indices.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 1\Lecture 4 Service Strategy and Service Design.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 1\Value Stream ACME case.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 2\Lecture 6 Process Value Maps.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 2\Lecture 7 5S in Worklace and  IM.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 2\Problem solving Practice Lesson (updated).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 4\Lean and Quality.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 4\Lect 14 Lean  Supply Chain Management-updated.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6005 Lean Enterprise\Module 4\Policy Deployment and lean-Hoshin Kanri.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assignment 1\SSP1_Florentinotj.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assignment 2\ITEC 6110 Fall 2016 Six Sigma Project Assignment 2.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assignment 2\SSP2_Project Definition Worksheet_Florentinotj.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assignment 3\Assigment 3 Draftr.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assignment 3\SSP3_FlorentinoTJ.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assignment 4\Assignment 4 Draft.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assingment 5\Instructor Feedback Assignments 2,3.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assingment 5\ITEC 6110_Six Sigma Implementation_Measure Phase_Pt 1 Thru Pt 3.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assingment 5\Six Sigma Project Guidelines.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assingment 5\SSP2_FlorentinoTJ.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Assingment 5\SSP5_FlorentinoTJ.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Chp 1.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Chp 3.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Creating a Quality Culture_Chp 9.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_L1_Intro(3).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Quality Org and Teams_Chp 8.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Analyze Phase_FMEA.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Analyze Phase_Pt 1 Thru Pt3.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Analyze Phase_Pt 1.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Analyze Phase_Pt 2.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Analyze Phase_Pt 3.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Implementation_Define Phase.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Implementation_Define Phase_Pt 2  Ch 5 and 11.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Implementation_Measure Phase_Pt 1 Thru Pt 3.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Implementation_Measure Phase_Pt 1.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Implementation_Measure Phase_Pt 2.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Implementation_Measure Phase_Pt 3.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Class Power Points\ITEC 6110_Six Sigma Intro and Ch 4.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\HW 1\HW1_Florentinotj Instructor Feedback.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\HW 1\HW1_Florentinotj.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\HW 1\ITEC 6110 Fall 2016 HmWk_1.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\HW 1\ITEC 6110 Fall 2016 HmWk_1_solutions from Instructor.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\HW 2\ITEC 6110 Fall2016 HmWk_2.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\HW 2\slidemodel-flat-sipoc-powerpoint-diagram-1-638.jpg`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\HW4_FlorentinoTJ.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\ITEC 6110 Fall2016 HmWk3 20 Nov16.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\ITEC 6110 Fall2016 HmWk3.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\ITEC 6110 Fall2016 HmWk4_rev (1).doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\ITEC 6110_Chp 1.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\ITEC 6110_Six Sigma Intro(1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\ITEC_6110_Syllabus_ Fall16.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Lecture PPT\ITEC 6110_Chp 1 (1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Lecture PPT\ITEC 6110_Six Sigma Implementation_Define Phase(1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Lecture PPT\ITEC 6110_Six Sigma Intro(1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6110 Quality Planning and Analysis\Six Sigma Project Guidelines.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\ITEC 6112_Basic Statistics(1) (1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\ITEC 6112_Basic Statistics, Problem Solving, and DOE Basics.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\ITEC 6112_L3_Problem Solving Basics(1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\ITEC 6112_L4_DOE Basics(1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\ITEC 6112_L5_Simple Comp Exp.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\ITEC_6112_Syllabus_ Spr17.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\Power Point Lectures\ITEC 6112_L10_Blocking and Confounding in Factorial Design(1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\Power Point Lectures\ITEC 6112_L11_Two Level Fractional Factorial Designs(1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\Power Point Lectures\ITEC 6112_L5-L7 Single Comp Exp to Single Factor ANOVA.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\Power Point Lectures\ITEC 6112_L5-L8 Single Comp Exp to Single Factor ANOVA, Intro to Factorial.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\Power Point Lectures\ITEC 6112_L5_Simple Comp Exp (1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\Power Point Lectures\ITEC 6112_L6_Single Factor ANOVA_Pt 1(1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\Power Point Lectures\ITEC 6112_L7_Single Factor ANOVA_Pt 2(1).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6112 Design of Experiments\Power Point Lectures\ITEC 6112_L8_Intro to Factorial Designs(2).ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6200 Technology Project Mgmt\8 - Template - Project Closeout Report and Lessons Learned.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6200 Technology Project Mgmt\CDC_UP_Project_Close_Out_Template (1).doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\2016 Spring ITEC 6406 Syllabus (1).doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Excel Financial Functions.html`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Excel Financial Functions_files\3d45f.jpg`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Excel Financial Functions_files\_p.html`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Excel Financial Functions_files\ads(1).html`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Excel Financial Functions_files\ads(2).html`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Excel Financial Functions_files\ads.html`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Excel Financial Functions_files\googlelogo_color_112x36dp.png`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Excel Financial Functions_files\push.html`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Excel Financial Functions_files\small-logo.png`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Excel Financial Functions_files\zrt_lookup.html`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\HW wk1\IMG_1659.JPG`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\HW wk1\IMG_1660.JPG`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\HW wk1\IMG_1661.JPG`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\HW wk1\IMG_1662.JPG`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\HW wk1\IMG_1663.JPG`
+- `D:\References\College\East Carolina Univeristy\ITEC 6406 Capital Project Cost Analysis for Tech\Mid Term\Chapter 6 - Annual Worth Analysis.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6407 CIM & automation\ITEC 6407 Final Report\CIM Last 4.ppt`
+- `D:\References\College\East Carolina Univeristy\ITEC 6501 Enterprice Process Improvement Project\ecu_logo.png`
+- `D:\References\College\East Carolina Univeristy\ITEC 6501 Enterprice Process Improvement Project\ITEC 6501 Defining The Project Tim Florentino v2.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6501 Enterprice Process Improvement Project\ITEC 6501 Defining The Project Tim Florentino.doc`
+- `D:\References\College\East Carolina Univeristy\ITEC 6501 Enterprice Process Improvement Project\RCAW-final.ppt`
+- `D:\References\College\East Carolina Univeristy\MSTSquality Checklist Fall 2016.doc`
+- `D:\References\College\East Carolina Univeristy\MSTSquality_2010-15_checksheet FLORENTINO (2).doc`
+- `D:\References\College\East Carolina Univeristy\Spring 2017\ITEC 6501 Enterprice Process Improvement Project\Define Project.doc`
+- `D:\References\College\East Carolina Univeristy\Spring 2017\ITEC 6501 Enterprice Process Improvement Project\Defining The Project.doc`
+- `D:\References\College\East Carolina Univeristy\Spring 2017\ITEC 6501 Enterprice Process Improvement Project\ITEC 6501 Defining The Project Tim Florentino.doc`
+- `D:\References\College\East Carolina Univeristy\Spring 2017\ITEC 6501 Enterprice Process Improvement Project\RCAW-final.ppt`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-01\AE-01.cs(1).doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-02\AE-02.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-03\AE-03.cs.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-03\AE-03.hw.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-03\AE-03.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-04\AE-04.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-05\AE-05.cs.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-05\AE-05.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-06\AE-06.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-07\AE-07.cs.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-07\AE-07.hw.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-07\AE-07.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-08\AE-08.cs.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-08\AE-08.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-09\AE-09.cs.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-10\AE-10.as.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-10\AE-10.hw.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-10\AE-10.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-10\AE-10.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-12\AE-12.cs.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-12\AE-12.hw.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-12\AE-12.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-13\AE-13.cs.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-13\AE-13.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-15\AE-15.hw.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-15\AE-15.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-16\AE-16.cs.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-16\AE-16.hw.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-16\AE-16.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-16\AE-16.sh 2011.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-17\AE-17.cs.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-17\AE-17.hw.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-17\AE-17.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-17\AE-17.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-18\AE-18.cs.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-18\AE-18.hw.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-18\AE-18.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-19\AE-19.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-20.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-21.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-22.pe (Generators).doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-22.pe (Motors).doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-24.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-25.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-26.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-26.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-27.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-28.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-28.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-29.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-29.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-32.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-34.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-35.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-36.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-37.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-39.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-40.sh.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-41 Master Layout.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE-41.pe.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\AE36 Lab Procedures 20124022b.doc`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\D-Y Transformer.csim.txt`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\Testing a Transformer (Std).csim.txt`
+- `D:\References\College\Prime Power School\Electrical Systems Engineering\Y-Y Transformer.csim.txt`
+- `D:\References\College\Prime Power School\Math\AB-01 Basic Aglebra\Significant Digits and rounding examples.doc`
+- `D:\References\College\Prime Power School\Math\AB-03 Meas Sys & Dimensional Analysis\AB-03.cs.doc`
+- `D:\References\College\Prime Power School\Math\AB-03 Meas Sys & Dimensional Analysis\AB-03.hw.doc`
+- `D:\References\College\Prime Power School\Math\AB-03 Meas Sys & Dimensional Analysis\AB-03.pe.doc`
+- `D:\References\College\Prime Power School\Math\AB-03 Meas Sys & Dimensional Analysis\AB-03.sh.doc`
+- `D:\References\College\Prime Power School\Math\AB-05 Word Problems\AB-05.as.doc`
+- `D:\References\College\Prime Power School\Math\AB-05 Word Problems\AB-05.hw.doc`
+- `D:\References\College\Prime Power School\Math\AB-05 Word Problems\AB-05.pe.doc`
+- `D:\References\College\Prime Power School\Math\AB-05 Word Problems\AB-05.sh.doc`
+- `D:\References\College\Prime Power School\Math\AB-06 Graphing\AB-06.sh.doc`
+- `D:\References\College\Prime Power School\Math\AB-06 Graphing\AB-07.pe.doc`
+- `D:\References\College\Prime Power School\Math\AB-08 Solving Systems of Equations\AB-08.as.doc`
+- `D:\References\College\Prime Power School\Math\AB-08 Solving Systems of Equations\AB-08.hw.doc`
+- `D:\References\College\Prime Power School\Math\AB-08 Solving Systems of Equations\AB-08.pe.doc`
+- `D:\References\College\Prime Power School\Math\AB-08 Solving Systems of Equations\AB-08.sh.doc`
+- `D:\References\College\Prime Power School\Math\AB-10 Ration, Proportion, and Variation\AB-10.as.doc`
+- `D:\References\College\Prime Power School\Math\AB-10 Ration, Proportion, and Variation\AB-10.hw.doc`
+- `D:\References\College\Prime Power School\Math\AB-10 Ration, Proportion, and Variation\AB-10.sh.doc`
+- `D:\References\College\Prime Power School\Math\AB-11 Geometry\AB-11.sh.doc`
+- `D:\References\College\Prime Power School\Math\AB-14 Logarithms\AB-14.as.doc`
+- `D:\References\College\Prime Power School\Math\AB-14 Logarithms\AB-14.hw.doc`
+- `D:\References\College\Prime Power School\Math\AB-14 Logarithms\AB-14.pe.doc`
+- `D:\References\College\Prime Power School\Math\AB-14 Logarithms\AB-14.sh.doc`
+- `D:\References\College\Prime Power School\Math\AB-15 Coordinate Conversions\AB-15.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-01 Intro to MSE\AD-01 Intro to MSE.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-01 Intro to MSE\atp-mse-01.as (2).doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-02 Fluid Statics\AD-02.cs (2).doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-02 Fluid Statics\AD-02.hw (2).doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-02 Fluid Statics\AD-02.pe (2).doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-02 Fluid Statics\AD-02.sh (2).doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-03 Fluid Dynamics\AD-03.as (2).doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-03 Fluid Dynamics\AD-03.hw (2).doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-03 Fluid Dynamics\AD-03.pe (2).doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-03 Fluid Dynamics\AD-03.sh (2).doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-04 Temp and thermal expansion\AD-04.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-04 Temp and thermal expansion\AD-04.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-04 Temp and thermal expansion\AD-04.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-05 Heat energy and phase change\AD-05.as.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-05 Heat energy and phase change\AD-05.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-05 Heat energy and phase change\AD-05.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-05 Heat energy and phase change\AD-05.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-06 Heat energy transfer\AD-06.as.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-06 Heat energy transfer\AD-06.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-06 Heat energy transfer\AD-06.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-07 Ideal Gas Law and Kenetic Theory\AD-07.as.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-07 Ideal Gas Law and Kenetic Theory\AD-07.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-07 Ideal Gas Law and Kenetic Theory\AD-07.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-07 Ideal Gas Law and Kenetic Theory\AD-07.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-08 0th and 1st Law of thermo\AD-08.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-08 0th and 1st Law of thermo\AD-08.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-08 0th and 1st Law of thermo\AD-08.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-08 0th and 1st Law of thermo\AD-08.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-09 2nd and 3rd Law of Thermo\AD-09.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-09 2nd and 3rd Law of Thermo\AD-09.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-09 2nd and 3rd Law of Thermo\AD-09.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-09 2nd and 3rd Law of Thermo\AD-09.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-10 Thermo Basics\AD-10.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-10 Thermo Basics\AD-10.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-10 Thermo Basics\AD-10.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-10 Thermo Basics\AD-10.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-11 Energy and Energy Forms\AD-11.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-11 Energy and Energy Forms\AD-11.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-11 Energy and Energy Forms\AD-11.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-11 Energy and Energy Forms\AD-11.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-12 Steady Flow Energy Equation\AD-12.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-12 Steady Flow Energy Equation\AD-12.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-12 Steady Flow Energy Equation\AD-12.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-12 Steady Flow Energy Equation\AD-12.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-13\AD-13.as.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-13\AD-13.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-13\AD-13.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-13\AD-13.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-14\AD-14.as.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-14\AD-14.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-14\AD-14.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-14\AD-14.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-16\AD-16.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-16\AD-16.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-17\AD-17.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-17\AD-17.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-17\AD-17.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-17\AD-17.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-19\AD-19.as.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-19\AD-19.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-19\AD-19.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-20\AD-20.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-20\AD-20.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-20\AD-20.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-21\AD-21.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-21\AD-21.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-21\AD-21.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-22\AD-22.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-22\AD-22.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-22\AD-22.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-23\AD-23.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-24\AD-24.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-24\AD-24.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-25\AD-25.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-25\AD-25.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-25\AD-25.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-25\AD-25.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-26\AD-26.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-26\AD-26.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-26\AD-26.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-27\AD-27.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-28\AD-28.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-28\AD-28.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-28\AD-28.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-28\AD-28.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-29\AD-29.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-29\AD-29.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-29\AD-29.pe.DOC`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-29\AD-29.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-30\AD-30.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-30\AD-30.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-30\AD-30.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-30\AD.30.pe.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-31\AD-31.cs.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-31\AD-31.hw.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-31\AD-31.sh.doc`
+- `D:\References\College\Prime Power School\Mechanical Systems Engineering\AD-32\AD-32.pe.doc`
+- `D:\References\College\Prime Power School\Physics\AC-01 Intro to Physics\AC-01.sh.doc`
+- `D:\References\College\Prime Power School\Physics\AC-02 Vectors\AC03 Vector PE(1).doc`
+- `D:\References\College\Prime Power School\Physics\AC-04 Kinematics\AC-04.cs.doc`
+- `D:\References\College\Prime Power School\Physics\AC-04 Kinematics\AC-04.hw.doc`
+- `D:\References\College\Prime Power School\Physics\AC-04 Kinematics\AC-04.sh.doc`
+- `D:\References\College\Prime Power School\Physics\AC-04 Kinematics\AC-05.pe.doc`
+- `D:\References\College\Prime Power School\Physics\AC-08 Application of Newton's Laws\AC-08.cs.doc`
+- `D:\References\College\Prime Power School\Physics\AC-08 Application of Newton's Laws\AC-08.hw.doc`
+- `D:\References\College\Prime Power School\Physics\AC-08 Application of Newton's Laws\AC-08.pe.doc`
+- `D:\References\College\Prime Power School\Physics\AC-08 Application of Newton's Laws\AC-08.sh.doc`
+- `D:\References\College\Prime Power School\Physics\AC-09 Dynamics of Circular Motion\AC-09.as.doc`
+- `D:\References\College\Prime Power School\Physics\AC-09 Dynamics of Circular Motion\AC-09.hw.doc`
+- `D:\References\College\Prime Power School\Physics\AC-09 Dynamics of Circular Motion\AC-09.pe.doc`
+- `D:\References\College\Prime Power School\Physics\AC-09 Dynamics of Circular Motion\AC-09.sh.doc`
+- `D:\References\College\Prime Power School\Physics\AC-10 Work, Energy, Power\AC-10.as.doc`
+- `D:\References\College\Prime Power School\Physics\AC-10 Work, Energy, Power\AC-10.hw.doc`
+- `D:\References\College\Prime Power School\Physics\AC-10 Work, Energy, Power\AC-10.pe.doc`
+- `D:\References\College\Prime Power School\Physics\AC-10 Work, Energy, Power\AC-10.sh.doc`
+- `D:\References\College\Prime Power School\Physics\AC-11 Impulse and Momentum\AC-11.as.doc`
+- `D:\References\College\Prime Power School\Physics\AC-11 Impulse and Momentum\AC-11.hw.doc`
+- `D:\References\College\Prime Power School\Physics\AC-11 Impulse and Momentum\AC-11.pe.doc`
+- `D:\References\College\Prime Power School\Physics\AC-11 Impulse and Momentum\AC-11.sh(1).doc`
+- `D:\References\College\Prime Power School\Physics\AC-12 Rotational Kinematics\AC-12.as.doc`
+- `D:\References\College\Prime Power School\Physics\AC-12 Rotational Kinematics\AC-12.hw.doc`
+- `D:\References\College\Prime Power School\Physics\AC-12 Rotational Kinematics\AC-12.pe.doc`
+- `D:\References\College\Prime Power School\Physics\AC-12 Rotational Kinematics\AC-12.sh.doc`
+- `D:\References\College\Prime Power School\Physics\AC-13 Rotaional Dynamics\AC-13.cs.doc`
+- `D:\References\College\Prime Power School\Physics\AC-13 Rotaional Dynamics\AC-13.hw.doc`
+- `D:\References\College\Prime Power School\Physics\AC-13 Rotaional Dynamics\AC-13.pe.doc`
+- `D:\References\College\Prime Power School\Physics\AC-13 Rotaional Dynamics\AC-13.sh.doc`
+- `D:\References\College\Prime Power School\Physics\AC-15 Elasticity\AC-15.cs.doc`
+- `D:\References\College\Prime Power School\Physics\AC-15 Elasticity\AC-15.hw.doc`
+- `D:\References\College\Prime Power School\Physics\AC-15 Elasticity\AC-15.sh.doc`
+- `D:\References\College\Prime Power School\Physics\AC-16 Simple Harmonic Motion\AC-16.cs.doc`
+- `D:\References\College\Prime Power School\Physics\AC-16 Simple Harmonic Motion\AC-16.hw.doc`
+- `D:\References\College\Prime Power School\Physics\AC-16 Simple Harmonic Motion\AC-16.pe.doc`
+- `D:\References\College\Prime Power School\Physics\AC-16 Simple Harmonic Motion\AC-16.sh.doc`
+- `D:\References\College\Prime Power School\Physics\AC-17 Wave Motion\AC-17.hw.doc`
+- `D:\References\College\Prime Power School\Physics\AC-17 Wave Motion\AC-17.pe.doc`
+- `D:\References\College\Prime Power School\Physics\AC-17 Wave Motion\AC-17.sh.doc`
+- `D:\References\College\Prime Power School\Physics\AC-18 Simple Machines\AC-18.hw(2).doc`
+- `D:\References\College\UoP\FIN 366 Week 3 Financial Transactions Risk Assessment Jacqueline Florentino.doc`
+- `D:\References\College\UoP\HRM.548.WK3.Team2.Metrics Evaluating Recruitment (2).doc`
+- `D:\References\College\UoP\HRM548 Week 3 Internal vs External Candidates Worksheet Jacqueline Florentino 26Oct20.doc`
+- `D:\References\College\UoP\HRM548_r2_internal_vs_external_candidates_worksheet_week3.doc`
+- `D:\References\College\UoP\HRM548_r2_job_duties_and_characteristics_Grading_Guide_week2.doc`
+- `D:\References\College\UoP\Jacquie Week 5 turnover evaluation-Grading Rubric.doc`
+- `D:\References\College\UoP\LDR531 Outer and Inner Game Jacqueline Florentino 22Apr19.ppt`
+- `D:\References\College\UoP\Week 4 Knowledge Check Screen Shot Jacqueline Florentino.PNG`
+- `D:\References\College\UoP\Week 5 Knowledge Check Jacqueline Florentino.PNG`
+- `D:\References\Electrical\IEEE color books.doc`
+- `D:\References\Filetree.txt`
+- `D:\References\Military Construction Manuals\OCAC Memo for Record.doc`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\download\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\download\index.xml`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\external-resources\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\lists\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\lists\lecture-notes\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\lists\problem-sets\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\lists\warm-up-problems\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\pages\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\pages\readings\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\pages\syllabus\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture01-2024feb06_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture02-2024feb09_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture03-2024feb20_v4_captions_vtt\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture03-2024feb20_v4_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture03-2024feb20_v4_transcript_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture04-2024feb15_v4_captions_vtt\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture04-2024feb15_v4_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture04-2024feb15_v4_transcript_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture05-2024feb22_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture06-2024feb27_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture07-2024feb29_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture08-2024mar05_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture09-2024mar12_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture10-2024mar14_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture11-2024mar19_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture12-2024mar21_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture13-2024apr02_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture14-2024apr04_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture15-2024apr09_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture16-2024apr11_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture17-2024apr16_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture18-2024apr23_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture19-2024apr25_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture20-2024apr30_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture21-2024may02_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture22-2024may07_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture23-2024may09_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\61200-sp24-lecture24-2024may14_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\activity-assignments\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\activity-assignments\index.xml`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\ds_store\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\lecture-notes\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\lecture-notes\index.xml`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\lecture-videos\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\lecture-videos\index.xml`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_jpg\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec01_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec02_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec03_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec04_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec05_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec06_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec07_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec08_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec09_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec10_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec11_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec12_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec13_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec14_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec15_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec16_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec17_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec18_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec19_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec20_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec21_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec22_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_lec24_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_pset01_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_pset02_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_pset03_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_pset04_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_pset05_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_pset06_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_pset07_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_pset08_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_pset09_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_pset10_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_wu01-probs_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_wu02-probs_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_wu03-probs_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_wu04-probs_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_wu05-probs_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_wu06-probs_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\mit6_1200j_s24_wu07-probs_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\problem-sets\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\resources\problem-sets\index.xml`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\sitemap.xml`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\static_resources\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\static_resources\mit6_1200j_s24.jpg`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\video_galleries\index.html`
+- `D:\References\MIT Opencourseware\MIT Math for Computer Science\video_galleries\lecture-videos\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\download\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\download\index.xml`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\alja-safe-crystalline-silica-free-alginate_8c23af0d-0a01-439b-b8a1-471298705348\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\autonomous-machines-thread-overview_2d6dce4b-7f80-46ff-b300-dde5e42c0f06\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\creating-meaningful-analogies-for-real-world-problems-with-the-tcsa-method-chatgpt_1c7d0fcc-c1b6-43a2-9e84-8188f4665e49\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\css-thread-overview_10db599b-b0b5-4e56-80fe-9a0aabfc3cd1\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\digital-cities-thread-overview_87186b92-fbeb-49b4-88ef-e436a0497661\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\he-neet-ways-of-thinking-implementing-them-at-mit-and-assessing-their-efficacy_f9ce8f8f-7b79-4d04-9773-8a12462b5970\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\hydrocal-white-gypsum-cement_2f3d6023-217d-45d7-871f-6b775903250d\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\neet-program_66d83ad8-f01d-44ce-8d2b-93d466424986\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\neet-ways-of-thinking_98e3d512-6d65-4a41-a406-935e34af90e2\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\sargent-art-non-hardening-modeling-clay_ed474da1-aff8-4271-bac3-9425f6a6b084\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\scratch_922bbf78-c0e4-4401-bfb4-d0b51e88ef0c\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\the-standard-definition-of-creativity_9c5f055a-dc29-458e-a01e-ad0a99a4d178\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\external-resources\toward-a-design-theory-of-problem-solving_e3ad1c88-df7f-4fb5-afd2-562ee3272d1f\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\instructor-insights\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\references\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\session-1-course-overview\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\session-2-algorithmic-thinking-in-autonomous-machines\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\session-3-systems-thinking-in-living-machines2\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\session-4-introduction-to-living-machines\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\session-5-systems-thinking-in-climate-and-sustainability-systems\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\session-6-synthetic-thinking-challenge-choosing-your-major-at-mit\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\session-7-making\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\pages\syllabus\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\activity-assignments\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\activity-assignments\index.xml`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\demonstration-videos\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\demonstration-videos\index.xml`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\lecture-notes\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\lecture-notes\index.xml`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_jpg\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses01_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses01_ref01_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses02_bugfix_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses02_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses02_pre01_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses02_proj_tutorial_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses02_scratch_instructions_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses03_app03_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses03_app03a_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses03_app04_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses03_pre02_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses03_ref02_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses04_app05_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses04_app05a_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses04_app06_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses04_app06a_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses05_app07_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses05_app07a_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses05_app09_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses05_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses05_pre03_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses05_pre04_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses05_ref03_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses06_app10_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses06_app12_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses06_app13_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses06_app13a_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses06_case_example_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses06_case_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses06_caseexample_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses07_app14_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\mitsp_248_f23_ses07_ref04a_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\sp248-minibot-functions_captions_vtt\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\sp248-minibot-functions_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\sp248-minibot-functions_transcript_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\sp248-molding-and-casting_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\sp248-plaster-mixing_captions_vtt\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\sp248-plaster-mixing_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\sp248-plaster-mixing_transcript_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\sp248-plaster-mixing_v2_captions_vtt\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\sp248-plaster-mixing_v2_mp4\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\resources\sp248-plaster-mixing_v2_transcript_pdf\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\sitemap.xml`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\static_resources\index.html`
+- `D:\References\MIT Opencourseware\MIT NEET Ways of Thinking\static_resources\mitsp_248_f23.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\download\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\download\index.xml`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\external-resources\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\calendar\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\exams\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\lecture-notes\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\projects\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\readings\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\recitations\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\related-resources\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\syllabus\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\tools\6001-scheme-for-windows-machines\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\tools\6001-scheme-installation-for-linux\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\tools\drscheme\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\tools\edscheme\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\tools\guide-to-mit-scheme\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\pages\tools\tools\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\-j_xl4ighja-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\-j_xl4ighja-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\-j_xl4ighja\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\10a-compilation\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\10a\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\10b-storage-allocation-and-garbage-collection\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\10b\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\1a-overview-and-introduction-to-lisp\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\1a\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\1b-procedures-and-processes-substitution-model\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\1b\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\2a-higher-order-procedures\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\2a\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\2b-compound-data\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\2b\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\3a-henderson-escher-example\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\3a\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\3b-symbolic-differentiation-quotation\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\3b\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\4a-pattern-matching-and-rule-based-substitution\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\4a\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\4b-generic-operators\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\4b\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\5a-assignment-state-and-side-effects\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\5a\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\5b-computational-objects\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\5b\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\6-001s05-th\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\6-001s05\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\6a-streams-part-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\6a\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\6b-streams-part-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\6b\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\7a-metacircular-evaluator-part-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\7a\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\7b-metacircular-evaluator-part-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\7b\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\8a-logic-programming-part-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\8a\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\8b-logic-programming-part-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\8b\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\9a-register-machines\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\9a\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\9b-explicit-control-evaluator\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\9b\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\aalr3cezpjg-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\aalr3cezpjg-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\aalr3cezpjg\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\abk4bzhuk48-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\abk4bzhuk48-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\abk4bzhuk48\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\bv87uzkmrte-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\bv87uzkmrte-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\bv87uzkmrte\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\cic8zbmcqac-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\cic8zbmcqac-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\cic8zbmcqac\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\collab_work\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\do1aqpbjcpg-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\do1aqpbjcpg-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\do1aqpbjcpg\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\dontpanicnew\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\drfkf-t-6co-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\drfkf-t-6co-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\drfkf-t-6co\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\ejemoeihv8c-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\ejemoeihv8c-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\ejemoeihv8c\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\exam-solutions\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\exam-solutions\index.xml`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\exams\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\exams\index.xml`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\fxq1swkjdg-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\fxq1swkjdg-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\fxq1swkjdg\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\gnulinux-6001tar_gz\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\grebwkgfzcs-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\grebwkgfzcs-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\grebwkgfzcs\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\jkgklilly0i-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\jkgklilly0i-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\jkgklilly0i\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture-notes\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture-notes\index.xml`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture-videos\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture-videos\index.xml`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture10webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture11webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture12webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture13webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture15webha2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture15webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture16webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture17_18web2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture17_18web\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture17_webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture18_webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture19interco\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture19webha2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture19webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture1webhand\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture20evalco\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture20webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture21lazyeva\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture21webha2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture21webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture22webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture23webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture26webhan\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture2lispstor\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture2webhand\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture3webhand\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture4webhand\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture5webhand\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture6webhand\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture7webhand\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture8webhand\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\lecture9webhand\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\osct4n2qq7o-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\osct4n2qq7o-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\osct4n2qq7o\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\pewzl3h2okg-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\pewzl3h2okg-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\pewzl3h2okg\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\project0\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\project1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\project2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\project5_eval\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\projects\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\projects\index.xml`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\q1_sp05\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\q1_sp05_solnspdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\q2_solns_postpdf\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\q2_sp05\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\qp05atxbop0-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\qp05atxbop0-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\qp05atxbop0\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\qveoq5k6xi0-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\qveoq5k6xi0-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\qveoq5k6xi0\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\rcqmipk1bje-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\rcqmipk1bje-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\rcqmipk1bje\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\readings\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\readings\index.xml`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\recitations\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\recitations\index.xml`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\sicp_fulltext\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\st05project4\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\tools\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\tools\index.xml`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\tqo6v3qr9ws-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\tqo6v3qr9ws-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\tqo6v3qr9ws\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\v_7mmwpgjhu-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\v_7mmwpgjhu-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\v_7mmwpgjhu\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\web\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\win32-6001_exe\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\writeup\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\yedzrwhi-9e-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\yedzrwhi-9e-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\yedzrwhi-9e\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\z8-qweewtck-1\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\z8-qweewtck-2\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\resources\z8-qweewtck\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\sitemap.xml`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\021e98053977f1cb5f91ad8ea8db46c0_1A.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\159facf30a7cff40e9862a332ab83819_7A.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\17eff22656a9c4dee849084e694d3e08_2A.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\1b1f38ab25e054a91e4a6b8b89e87cde_3A.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\35197d4d0e27cfcae643a92743f5d438_10B.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\50fe6c4b2f9a7f1dd52bfe6fb4164854_6-001s05-th.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\5715c8dfec19f1365ecee6f815fb68dd_3B.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\5931590f201b64f11ab5ba19bf210b14_1B.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\666fbe3ee558d5de9c365c404558e46e_6B.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\6a12c1495ef0810e6deabf42ac68e89d_4A.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\6afe095f9d5a909d30430338efddb391_4B.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\7a4b999b78175374c40acda63b12fb4f_8A.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\8f35b47496ec1a93e158ed1fbc8170f1_10A.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\a3cab0107ecde1cad2a379f164070d23_9B.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\ad40b7bc2fd8fcd95f535c77aeeafde3_6-001s05.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\b1ffb01180c304b21b1ebcde46d7d7a7_2B.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\b59a27ab361cc061b77d69fb7217a8ab_7B.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\c21ca024c0edc41031795456d149b93c_8B.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\cdc50880ca68b6a554a248057f1f5fb7_9A.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\f59421207eb17971a6ac354694cec84a_5B.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\f5fa7078c5a9c3c13182f049b5c96fbc_5A.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\f9f754d132bac988a9e8ca884d0e20a1_6A.jpg`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\static_resources\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\video_galleries\index.html`
+- `D:\References\MIT Opencourseware\MIT Structure and Interpretation of Computer Programs\video_galleries\video-lectures\index.html`
+- `D:\References\MyAIOS\Skills\grill-with-docs.txt`
+- `D:\References\Old AI References (Claude, Gemini)\url.htm`
+- `D:\References\Personal For AI Training\Bloodline.txt`
+- `D:\References\Personal For AI Training\Dreadgod.txt`
+- `D:\References\Personal For AI Training\Four-Meridian-Qigong-Exercises-Tevi.txt`
+- `D:\References\Personal For AI Training\GhostWater.txt`
+- `D:\References\Personal For AI Training\Integral Qigong and Tai Chi.txt`
+- `D:\References\Personal For AI Training\Jack Welchs leaderhip Case study.txt`
+- `D:\References\Personal For AI Training\Music Interests.txt`
+- `D:\References\Personal For AI Training\Reaper.txt`
+- `D:\References\Personal For AI Training\Threshold.txt`
+- `D:\References\Personal For AI Training\Uncrowned.txt`
+- `D:\References\Personal For AI Training\Underlord.txt`
+- `D:\References\Personal For AI Training\Waybound.txt`
+- `D:\References\Personal For AI Training\WinterSteel.txt`
+- `D:\References\tflorentinoChrome Passwords 1.csv`
+- `D:\References\tflorentinoChrome Passwords.csv`
+- `D:\References\vault-list.txt`

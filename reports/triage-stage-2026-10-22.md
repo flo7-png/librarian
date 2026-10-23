@@ -148,3 +148,16 @@ Items 4 and 7 stay `needs_review`; a Ghostscript install can retry item 7 later.
   `-PassThru` + `WaitForExit()`; resolve real winget exe via
   `Get-AppxPackage Microsoft.DesktopAppInstaller`; transcript logging collides
   if a previous elevated session still holds the file — use unique log names.
+
+## Dispositions (Tim, 2026-10-23)
+
+- **Duplicates:** the 216 non-canonical members of the 148 exact-hash groups
+  (already carrying `Duplicate of ...` in `error_message`) were set to
+  `INACTIVE` in `data/librarian.db`. Invariant verified: every group keeps
+  exactly one active member. DB backup:
+  `data/backups/librarian.db-20261023-060743`. Status counts after:
+  INDEXED 10,451 / DISCOVERED 847 / INACTIVE 216 / NEEDS_REVIEW 19.
+- **Unsupported-type (746):** kept as a standing review list — no DB status
+  change. Full ledger: `reports/standing-review-unsupported-2026-10-23.md`
+  (+ machine-readable `data/reviews/unsupported-standing-review.json`).
+- **Git:** everything above pushed to `origin/main` (flo7-png/librarian).
